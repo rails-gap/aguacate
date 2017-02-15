@@ -2,7 +2,9 @@
   <div class="row">
     <% projects.each do |project| %>
       <div class="col-sm-12">
-        <%= project.name %>
+        <%= link_to project_path(project) do %>
+          <%= project.name %>
+        <% end %>
       </div>
     <% end %>
   </div>

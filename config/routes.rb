@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   end
 
   resources :projects, only: [:index, :show]
+  resources :sprints do
+    get 'delete'
+  end
 
   namespace :admin do
     resources :users, only: [:index, :edit, :update]

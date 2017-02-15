@@ -1,0 +1,18 @@
+<div id="project-page" class="container">
+
+  <h1 class="title"><%= @project.name %></h1>
+
+  <h2>
+    <span>Sprints</span>
+    <span>
+      <%= link_to new_sprint_path, remote: true, class: 'btn btn-primary pull-right' do %>
+        <span class="glyphicon glyphicon-plus"></span> New Sprint
+      <% end %>
+    </span>
+  </h2>
+
+  <div id="sprints-content">
+    <%= render 'sprints', sprints: @project.sprints %>
+  </div>
+
+</div>
