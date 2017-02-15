@@ -1,0 +1,3 @@
+$("#projects-modal-content")
+  .html("<%= escape_javascript(render 'new', project: @entity_object) %>");
+$("#projects-modal").modal();

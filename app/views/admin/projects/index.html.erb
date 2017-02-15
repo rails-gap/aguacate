@@ -1,0 +1,23 @@
+<%= render 'admin/shared/header', selected: 'projects' %>
+
+<div class="container">
+  <h2>
+    <span>Projects</span>
+    <span>
+      <%= link_to new_admin_project_path, remote: true, class: 'btn btn-primary pull-right' do %>
+        <span class="glyphicon glyphicon-plus"></span> New Project
+      <% end %>
+    </span>
+  </h2>
+
+  <div id="projects-content">
+    <%= render 'index', projects: @all_entity_objects %>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="projects-modal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div id="projects-modal-content" class="modal-content"></div>
+    </div>
+  </div>
+</div>
